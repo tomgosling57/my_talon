@@ -55,3 +55,9 @@ class Actions:
         actions.mouse_click() 
         actions.user.grid_close()
         actions.edit.select_line()
+
+    def refresh_view():
+        """Refreshes the view of the crm list"""
+        actions.user.grid_win("7669")
+        actions.mouse_click()
+        

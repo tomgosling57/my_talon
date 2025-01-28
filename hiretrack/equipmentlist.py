@@ -132,3 +132,8 @@ class Actions:
         """Toggles the 'we collect' option on the equipment list."""
         actions.user.grid_win("8233")
         actions.mouse_click()
+    
+    def equipment_add():
+        """Adds this selected equipment in the equipment selected to the equipment list."""
+        actions.user.grid_win("33")
+        actions.mouse_click()

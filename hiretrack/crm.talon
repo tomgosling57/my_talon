@@ -35,9 +35,9 @@ open job | quote:
     user.enable_tag("user.htquote")
 
 search email:
-    mimic("copy email")
-    mimic("focus outlook")
-    mimic("search clip")
+    user.copy_crm_email()
+    user.switcher_focus("outlook")
+    user.search_clipboard_outlook()
 
 tab close:
     user.grid_activate()
@@ -83,3 +83,11 @@ status follow second:
     user.edit_crm_status()
     insert("second")
     key("enter")
+
+status lost: 
+    user.edit_crm_status()
+    insert("complete - lost")
+    key("enter")
+    
+refresh view:
+    user.refresh_view()

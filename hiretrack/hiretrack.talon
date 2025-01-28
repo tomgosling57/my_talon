@@ -2,25 +2,12 @@ app: hiretrack
 
 -
 open crm list:
-    mimic("grid win")
-    sleep(0.2)
-    mimic("seven seven five eight touch")
-    sleep(0.2)
-    mimic("grid win")
-    sleep(0.2)
-    mimic("six touch")
-    user.enable_tag("user.htcrm")
-    
-refresh view:
-    mimic("grid win")
-    sleep(0.2)
-    mimic("seven six six nine touch")
-
+    user.open_crm_list()
 
 tab close:
     user.grid_win("9938")
     mouse_click()
-    key("enter")
+    
 
 search view:
     user.grid_win("7552")
@@ -31,7 +18,12 @@ change view:
     mouse_click()
     
 job mode:
-    user.enable_tag("user.htquote")
+    user.toggle_tag("user.htquote")
 
 equipment mode:
-    user.enable_tag("user.hteqlist")
+    user.toggle_tag("user.hteqlist")
+
+crew mode:
+    user.toggle_tag("user.htcreweditor")
+
+hire track password: "tomgosling"

@@ -53,6 +53,8 @@ fix [date] back:
 tab close:
     user.grid_win("9938")
     mouse_click()
-    key("enter")
     user.disable_tag("user.htquote")
     user.disable_tag("user.hteqlist")
+
+equipment add:
+    user.equipment_add()

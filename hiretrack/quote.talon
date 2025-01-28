@@ -14,6 +14,11 @@ fix job date out:
 fix job date back:
     user.fix_job_date_back()
 
+edit [job] date out:
+    user.edit_job_date_out()
+edit [job] date back:
+    user.edit_job_date_back()
+
 fix job dates:
     user.fix_job_dates()
 
@@ -92,7 +97,6 @@ send email:
 tab close:
     user.grid_win("9938")
     mouse_click()
-    key("enter")
     user.disable_tag("user.htquote")
     user.disable_tag("user.hteqlist")
 
@@ -108,8 +112,14 @@ open general:
 open crew:
     user.open_crew()
 
-add area:
-    user.add_crew_area
+crew add area:
+    user.crew_add_area()
+
+crew edit role:
+    user.crew_edit_role()
+
+prep crew <Installation | Removal>:
+    user.prep_crew()
 
 transport <user.transport_type> [<number>] [<user.transport_vehicle>] <user.transport_line_type>:
     user.transport_line(transport_type, transport_vehicle or "large van", number or 80, transport_line_type)

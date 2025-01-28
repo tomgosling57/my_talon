@@ -105,17 +105,20 @@ class Actions:
         actions.user.grid_win("8858")
         actions.mouse_click()
         actions.mouse_click()
-        
+        actions.sleep(.5)
+                
         # Copying telephone field
         actions.user.grid_win("528")
         actions.mouse_click()
         actions.edit.select_line()
         actions.key("ctrl-c")
+        actions.sleep(.5)
 
         # Pasting the telephone value in the mobile field
         actions.user.grid_win("28")
         actions.mouse_click()
         actions.key("ctrl-v")
+        actions.sleep(.5)
 
         # Setting contact as main job contact
         actions.user.grid_win("162")
@@ -150,6 +153,7 @@ class Actions:
         """Opens the transport panel."""
         actions.user.grid_win("759")
         actions.mouse_click()
+        actions.user.disable_tag("user.hteqlist")
     
     def open_general():
         """Opens the general panel."""
@@ -211,3 +215,37 @@ class Actions:
         actions.mouse_click()
         sleep(.2)
         actions.key("enter")
+
+    def open_crew():
+        """Opens the crew tab."""
+        actions.user.grid_win("758")
+        actions.mouse_click()
+        actions.user.disable_tag("user.hteqlist")
+
+    def crew_add_area():
+        """Adds a new area in the crew tab."""
+        actions.user.grid_win("751")
+        actions.mouse_click()
+
+    def crew_edit_role():
+        """Edits the currently selected role in the crew tab."""
+        actions.user.grid_win("852")
+        actions.mouse_click()
+        actions.user.enable_tag("user.htcreweditor")
+        actions.user.disable_tag("user.htquote")
+        
+    def prep_crew(crew_type: str):
+        """Adds a new installation area in the crew tab"""
+        actions.user.add_crew_area()
+        # actions.insert(crew_type)
+        # actions.key("enter")
+        # actions.key("down")
+        # actions.key("left")
+        # actions.key("down")
+        # actions.user.crew_edit_role()
+        # actions.user.edit_crew_type("Tech Audio-Visual")
+        # actions.user.added_crew_quantity(1)
+        # actions.user.edit_crew_end()
+        # actions.user.insert("13")
+
+    
