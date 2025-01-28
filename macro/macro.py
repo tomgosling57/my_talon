@@ -16,7 +16,7 @@ macros = {}
 macro = []
 recording = False
 macros_file = os.path.join(os.getcwd(), "user", "my_talon", "macro", "macros.json")
-
+time_between_actions = 0.3
 @imgui.open(y=0)
 def macro_list_gui(gui: imgui.GUI):
     gui.text("macros")
@@ -78,6 +78,8 @@ class Actions:
         for words in selected_macro:
             print(words)
             actions.mimic(words)
+            actions.sleep(time_between_actions)  # Add a half-second wait between actions
+
 
     def macro_copy(name: str):
         """Copy the specified macro to the clipboard as a Talon command."""
