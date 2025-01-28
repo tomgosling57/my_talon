@@ -1,4 +1,5 @@
 app: outlook
+
 -
 search:
     user.grid_activate()
@@ -11,3 +12,24 @@ search:
 
 clip:
     key("ctrl-v enter")
+
+sign:
+    user.add_signature()
+
+discard:
+    user.discard_email()
+
+reply:
+    user.reply_email()
+
+go results:
+    user.select_outlook_results()
+
+home:
+    user.outlook_home()
+
+categorize selected:
+    user.categorize_results()
+
+categorize all:
+    user.categorize_all()
