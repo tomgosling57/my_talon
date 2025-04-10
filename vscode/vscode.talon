@@ -19,8 +19,13 @@ set terminal height:
 set bash height: mimic("set terminal height")
 set console height: mimic("set terminal height")
 
-kill terminal:
-    user.grid_win("63284")
-    mouse_click()
-kill bash: mimic("kill terminal")
-kill console: mimic("kill terminal")
+kill terminal: user.vscode("workbench.action.terminal.kill")
+kill bash: user.vscode("workbench.action.terminal.kill")
+kill console: user.vscode("workbench.action.terminal.kill")
+
+new terminal: key("ctrl-~")
+new bash: key("ctrl-~")
+new console: key("ctrl-~")
+
+select [terminal] output: user.select_terminal_output()
+edit [text]: user.grid_n_click("5")

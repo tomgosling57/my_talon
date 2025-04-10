@@ -40,3 +40,10 @@ class Actions:
         actions.user.grid_win("7946")
         actions.mouse_click()
         actions.user.enable_tag("user.roo_settings")
+    
+    def select_terminal_output():
+        """Selects the output of the terminal."""
+        actions.user.grid_win("2228")
+        actions.mouse_drag()
+        actions.user.grid_win("2888")
+        
