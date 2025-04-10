@@ -36,17 +36,17 @@ class UserActions:
         hiss_scroll_active = True
         hiss_scroll_up = False
 
-    def noise_trigger_hiss(active: bool):
-        global hiss_scroll_up
-        global hiss_scroll_active
+    # def noise_trigger_hiss(active: bool):
+    #     global hiss_scroll_up
+    #     global hiss_scroll_active
         
-        if hiss_scroll_active == True:
-            if settings.get("user.mouse_enable_hiss_scroll"):
-                if active:
-                    if hiss_scroll_up:
-                        actions.user.mouse_scroll_up_continuous()
-                    else:
-                        actions.user.mouse_scroll_down_continuous()
-                else:
-                    actions.user.mouse_scroll_stop()
+    #     if hiss_scroll_active == True:
+    #         if settings.get("user.mouse_enable_hiss_scroll"):
+    #             if active:
+    #                 if hiss_scroll_up:
+    #                     actions.user.mouse_scroll_up_continuous()
+    #                 else:
+    #                     actions.user.mouse_scroll_down_continuous()
+    #             else:
+    #                 actions.user.mouse_scroll_stop()
 
