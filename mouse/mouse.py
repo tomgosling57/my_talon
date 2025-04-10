@@ -14,7 +14,11 @@ class Actions:
         """Disables mouse hiss to scroll"""
         global hiss_scroll_active
         hiss_scroll_active = False
-
+    
+    def grid_n_click(grid_numbers: str):
+        """Activates grid win and enters the number sequence and then clicks."""
+        actions.user.grid_win(grid_numbers)
+        actions.mouse_click()
 
 
 @ctx.action_class("user")
@@ -50,3 +54,4 @@ class UserActions:
     #             else:
     #                 actions.user.mouse_scroll_stop()
 
+    
