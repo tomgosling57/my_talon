@@ -1,7 +1,6 @@
 app: vscode
 -
-bar cline: user.vscode("    
-)
+bar docker: user.vscode("dockerContainers.focus")    
 bar roo: 
     user.vscode("roo-cline.SidebarProvider.focus")    
     user.enable_tag("user.roo")
