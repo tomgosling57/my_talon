@@ -15,3 +15,9 @@ class Actions:
         actions.user.grid_place_window()
         actions.user.grid_narrow_list(grid_numbers)
         actions.user.grid_close()
+    
+    def grid(grid_numbers: str):
+        """Activates the mouse grid over the entire screen and moves to the given grid numbers."""    
+        actions.user.grid_activate()
+        actions.user.grid_narrow_list(grid_numbers)
+        actions.user.grid_close()
