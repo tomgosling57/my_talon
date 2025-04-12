@@ -46,4 +46,10 @@ class Actions:
         actions.user.grid_win("2228")
         actions.mouse_drag()
         actions.user.grid_win("2888")
-        
+    
+    def run_command(command: str):
+        """Runs the given the command in the terminal."""
+        actions.user.grid_win("2")
+        actions.mouse_click()
+        actions.insert(command)
+        actions.key("enter")
