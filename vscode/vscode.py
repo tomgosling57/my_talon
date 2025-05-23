@@ -37,7 +37,7 @@ class Actions:
     
     def roo_settings():
         """Opens the setting tab in recode."""
-        actions.user.grid_win("7946")
+        actions.user.grid_win("7943")
         actions.mouse_click()
         actions.user.enable_tag("user.roo_settings")
     
@@ -45,7 +45,7 @@ class Actions:
         """Selects the output of the terminal."""
         actions.user.grid_win("2228")
         actions.mouse_drag()
-        actions.user.grid_win("2888")
+        actions.user.grid_win("288")
     
     def run_command(command: str):
         """Runs the given the command in the terminal."""

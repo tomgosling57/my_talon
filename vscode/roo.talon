@@ -1,8 +1,7 @@
 tag: user.roo
 -
 next mode: key("ctrl-.")
-[select | set ] profile: user.roo_s
-elect_profile()
+[select | set ] profile: user.roo_select_profile()
 edit profile: user.roo_edit_profile()
 
 roo settings: user.roo_settings()
@@ -19,9 +18,13 @@ ask roo:
     mouse_click()
 
 roo run:
-    user.grid_win("157")
+    user.grid_win("172")
     mouse_click()
  
 close task:
-    user.grid_win("767999")
+    user.grid_win("76766")
     mouse_click()
+
+new task: user.vscode("roo-cline.newTask")
+
+enhance prompt: user.grid_n_click("1344")

@@ -1,8 +1,34 @@
 {
-    "help": [
+    "copy shortcuts": [
         [
-            "help",
-            "active"
+            "grid",
+            "seven"
+        ],
+        [
+            "grid",
+            "off"
+        ],
+        [
+            "hash",
+            "super",
+            "shift",
+            "sun"
+        ],
+        [
+            "drag"
+        ],
+        [
+            "grid",
+            "five",
+            "three"
+        ],
+        [
+            "end",
+            "drag"
+        ],
+        [
+            "grid",
+            "off"
         ]
     ]
 }

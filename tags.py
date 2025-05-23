@@ -32,6 +32,10 @@ class Actions:
             tags.remove(tag)
 
         else:
-            tags.append(tag) 
+            tags.append(tag)
         
         ctx.tags = frozenset(tags)
+
+    def code_operator_not_in() -> str:
+        """Returns the 'not in' operator"""
+        return "not in"
