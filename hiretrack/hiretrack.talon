@@ -4,10 +4,7 @@ app: hiretrack
 open crm list:
     user.open_crm_list()
 
-tab close:
-    user.grid_win("9938")
-    mouse_click()
-    
+
 
 search view:
     user.grid_win("7552")

@@ -1,21 +1,22 @@
-
 # photoshop.talon
-app: Adobe Photoshop 2024
+app: Adobe Photoshop 2025
 -
 keyboard shortcuts: key("alt-ctrl-shift-k")
 
-# Tools
-brush tool: key(b)
-move tool: key(v)
-lasso tool: key(l)
-bucket tool: key(g)
-zoom tool: key(z)
-erase tool: key(e)
-rectangle tool: key(u)
 
 # Tools settings
-brush size: user.grid_n_click("7764")
+brush size: user.grid_win_click("7764")
 brush opacity: user.photoshop_brush_opacity()
+
+# Tools
+brush tool: user.brush_tool()
+marque tool: user.marque_tool()
+move tool: user.move_tool()
+lasso tool: user.lasso_tool()
+bucket tool: user.bucket_tool()
+zoom tool: user.zoom_tool()
+erase tool: user.erase_tool()
+rectangle tool: user.rectangle_tool()
 
 # Layers
 new layer: key(ctrl-shift-n)
@@ -27,9 +28,9 @@ hover layers: user.hover_layers()
 layer via copy: key("ctrl-j")
 layer via cut: key("ctrl-shift-j")
 export as PNG: key("shift-ctrl-'")
-select blending mode: user.grid_n_click("6228")
+select blending mode: user.grid_win_click("6228")
 layer fill: user.photoshop_fill()
-opacity: user.grid_n_click("6328")
+opacity: user.grid_win_click("6328")
 
 
 # Panels
@@ -64,11 +65,16 @@ filter layers: user.photoshop_filter_layers()
 transform: key(ctrl-t)
 transform width: user.photoshop_transform_width()
 transform height: user.photoshop_transform_height()
-transform link: user.grid_n_click("79")
+transform link: user.grid_n_click("7869")
 transform x: user.photoshop_transform_x()
 transform y: user.photoshop_transform_y()
 transform angle: user.photoshop_transform_angle()
-
+transform layer x: user.photoshop_transform_layer_x()
+transform layer y: user.photoshop_transform_layer_y()
+transform layer width: user.photoshop_transform_layer_width()
+transform layer height: user.photoshop_transform_layer_height()
+centre x: user.photoshop_center_x()
+center y: user.photoshop_center_y()
 fit screen: key(ctrl-0)
 actual pixels: key(ctrl-alt-0)
 

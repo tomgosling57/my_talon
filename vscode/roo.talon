@@ -17,14 +17,19 @@ ask roo:
     user.grid_win("1")
     mouse_click()
 
-roo run:
-    user.grid_win("172")
-    mouse_click()
- 
+roo run: user.grid_n_click("1811")
+run command: user.grid_n_click("1811")
+
 close task:
-    user.grid_win("76766")
+    user.grid_win("8713")
     mouse_click()
 
+done: 
+    user.disable_tag("roo_settings")
+    user.grid_win_click("8712")
+
+modes:user.roo_modes()
+edit mode: user.roo_edit_mode()
 new task: user.vscode("roo-cline.newTask")
 
-enhance prompt: user.grid_n_click("1344")
+enhance prompt: user.grid_n_click("1344")()

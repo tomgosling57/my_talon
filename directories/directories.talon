@@ -1,12 +1,17 @@
 os: windows
 -
-open textures: user.run_directory("C:\\Users\\tomgo\\Pictures\\Textures")
-open downloads: user.run_directory("C:\\Users\\tomgo\\Downloads")
-open pictures: user.run_directory("C:\\Users\\tomgo\\Pictures")
-open desktop: user.run_directory("C:\\Users\\tomgo\\Desktop")
-open documents: user.run_directory("C:\\Users\\tomgo\\Documents")
-open Baz Ravish: user.run_directory("E:\\Baz Ravish")
-open Baz web: user.run_directory("E:\\Baz Ravish\\baz_web")
-open Baz Ravish art: user.run_directory("E:\\Baz Ravish\\Art")
-open Baz Ravish photos: user.run_directory("E:\\Baz Ravish\\Art\\Photos") 
-open fuzz baby: user.run_directory("E:\\fuzzbaby\\")
+
+settings():
+    user.user = "SIMON"
+    
+open textures: user.open_textures()
+open downloads: user.open_downloads()
+open pictures: user.open_pictures()
+open desktop: user.open_desktop()
+open documents: user.open_documents()
+open Baz Ravish: user.open_baz_ravish()
+open Baz web: user.open_baz_web()
+open Baz Ravish art: user.open_baz_ravish_art()
+open Baz Ravish photos: user.open_baz_ravish_photos()
+open fuzz baby: user.open_fuzz_baby()
+talon user directory: insert(user.get_talon_user_directory())

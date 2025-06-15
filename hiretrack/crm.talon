@@ -1,4 +1,5 @@
 app: hiretrack
+
 -
 prep crm:
     user.grid_activate()
@@ -39,15 +40,7 @@ search email:
     user.switcher_focus("outlook")
     user.search_clipboard_outlook()
 
-tab close:
-    user.grid_activate()
-    user.grid_place_window()
-    user.grid_narrow_list("9938")
-    mouse_click()
-    user.grid_close()
-    key("enter")
-    user.disable_tag("user.htcrm")
-    user.disable_tag("user.htlocate")
+
 
 close dont save:
     user.grid_activate()

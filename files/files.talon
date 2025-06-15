@@ -1,4 +1,4 @@
-os: windows
+fileos: windows
 -
 
 # Core Files

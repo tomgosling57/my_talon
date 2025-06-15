@@ -16,7 +16,7 @@ class Actions:
     
     def set_sidebar_width():
         """Sets the width of the sidebar granted the user has begun dragging the panel before calling the command."""
-        actions.user.grid_win("46")
+        actions.user.grid_win("54")
         actions.mouse_click()
         actions.mouse_release()
     
@@ -37,10 +37,19 @@ class Actions:
     
     def roo_settings():
         """Opens the setting tab in recode."""
-        actions.user.grid_win("7943")
+        actions.user.grid_win("8754")
         actions.mouse_click()
-        actions.user.enable_tag("user.roo_settings")
+        actions.user.enable_tag("user.roo_settings")        
     
+    def roo_modes():
+        """Opens the modes dropdown in roo code."""
+        actions.user.grid_win_click("11")
+    
+    def roo_edit_mode():
+        """Opens the mode editor for the current mode in roo code."""
+        actions.user.roo_modes()
+        actions.user.grid_win_click("118")
+        
     def select_terminal_output():
         """Selects the output of the terminal."""
         actions.user.grid_win("2228")
@@ -53,3 +62,8 @@ class Actions:
         actions.mouse_click()
         actions.insert(command)
         actions.key("enter")
+    def vscode_open_folder():
+        """Opens windows explore folder selector to open in vscode."""
+        actions.user.vscode("workbench.action.files.openFolder")
+        sleep(.5)
+        actions.user.grid_win_click("8828")

@@ -46,6 +46,7 @@ install: user.run_command("npm install")
 
 git init: user.run_command("git init")
 git clone: insert("git clone ")
+git add : user.vscode("git.stage")
 git add cli: insert("git add ")
 git commit cli: insert("git commit -m ")
 git remote add: insert("git remote add ")
@@ -58,3 +59,8 @@ git branch: insert("git branch ")
 
 complete: key("tab")
 save: key("ctrl-s")
+
+bar explore: user.vscode("workbench.files.action.showActiveFileInExplorer")
+hide sidebar: user.vscode("workbench.action.minimizeOtherEditorsHideSidebar +when:auxiliaryBarVisible || multipleEditorGroups || sideBarVisible")
+show active file: user.vscode("workbench.files.action.showActiveFileInExplorer")
+open folder: user.vscode_open_folder()
